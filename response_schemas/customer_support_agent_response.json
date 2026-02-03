@@ -1,0 +1,61 @@
+{
+  "agent_name": "Customer Support Agent",
+  "agent_id": "69819b9412326156554941e1",
+  "agent_purpose": "assistant",
+  "description": "Customer support assistant that provides helpful answers with sources, confidence scores, follow-up questions, and escalation flags",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "answer": "string",
+      "sources": [
+        "any"
+      ],
+      "confidence": "number",
+      "follow_up_questions": [
+        "string"
+      ],
+      "requires_escalation": "boolean"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "answer": "Hello! How can I assist you today? If you have questions about our services, automation solutions, or need support, feel free to ask. I'm here to help with any information you need.",
+      "sources": [],
+      "confidence": 0.95,
+      "follow_up_questions": [
+        "Would you like information about HR automation?",
+        "Are you interested in AI-powered agents for your business?"
+      ],
+      "requires_escalation": false
+    },
+    "metadata": {
+      "agent_name": "Customer Support Agent",
+      "timestamp": "2024-06-13T11:24:53Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-03T06:55:26.985927",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "answer": "Hello! How can I assist you today? If you have questions about our services, automation solutions, or need support, feel free to ask. I'm here to help with any information you need.",
+      "sources": [],
+      "confidence": 0.95,
+      "follow_up_questions": [
+        "Would you like information about HR automation?",
+        "Are you interested in AI-powered agents for your business?"
+      ],
+      "requires_escalation": false
+    },
+    "metadata": {
+      "agent_name": "Customer Support Agent",
+      "timestamp": "2024-06-13T11:24:53Z"
+    }
+  }
+}

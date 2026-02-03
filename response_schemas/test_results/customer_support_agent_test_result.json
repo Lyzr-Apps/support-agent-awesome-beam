@@ -1,0 +1,27 @@
+{
+  "agent_name": "Customer Support Agent",
+  "agent_id": "69819b9412326156554941e1",
+  "test_message": "How can I reset my password?",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-03T06:55:02.091324",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "answer": "Hello! While the knowledge base does not provide specific instructions about resetting your password, most platforms typically offer a 'Forgot Password' link on the login page. Clicking this link will guide you through resetting your password via email or SMS verification. If you do not see this option or need further assistance, please let me know, and I can help you escalate the request.",
+      "sources": [],
+      "confidence": 0.6,
+      "follow_up_questions": [
+        "Do you need step-by-step instructions for a specific platform?",
+        "Are you unable to access your email or phone for password reset verification?"
+      ],
+      "requires_escalation": false
+    },
+    "metadata": {
+      "agent_name": "Customer Support Agent",
+      "timestamp": "2024-06-13T15:37:01Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"answer\": \"Hello! While the knowledge base does not provide specific instructions about resetting your password, most platforms typically offer a 'Forgot Password' link on the login page. Clicking this link will guide you through resetting your password via email or SMS verification. If you do not see this option or need further assistance, please let me know, and I can help you escalate the request.\",\n    \"sources\": [],\n    \"confidence\": 0.6,\n    \"follow_up_questions\": [\n      \"Do you need step-by-step instructions for a specific platform?\",\n      \"Are you unable to access your email or phone for password reset verification?\"\n    ],\n    \"requires_escalation\": false\n  },\n  \"metadata\": {\n    \"agent_name\": \"Customer Support Agent\",\n    \"timestamp\": \"2024-06-13T15:37:01Z\"\n  }\n}"
+}

@@ -1,0 +1,82 @@
+{
+  "workflow_name": "Customer Support System",
+  "workflow_type": "single_agent",
+  "description": "Single agent customer support system with knowledge base integration",
+  "nodes": [
+    {
+      "id": "user_input",
+      "type": "Input",
+      "label": "Customer Query",
+      "nodeCategory": "input",
+      "position": {
+        "x": 100,
+        "y": 200
+      }
+    },
+    {
+      "id": "support_agent",
+      "type": "Agent",
+      "label": "Customer Support Agent",
+      "nodeCategory": "agent",
+      "agent_id": "69819b9412326156554941e1",
+      "agent_name": "Customer Support Agent",
+      "has_knowledge_base": true,
+      "rag_id": "69819b84fd1daac38e53cb58",
+      "position": {
+        "x": 400,
+        "y": 200
+      }
+    },
+    {
+      "id": "response_output",
+      "type": "Output",
+      "label": "Support Response",
+      "nodeCategory": "end",
+      "position": {
+        "x": 700,
+        "y": 200
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "user_input",
+      "target": "support_agent"
+    },
+    {
+      "source": "support_agent",
+      "target": "response_output"
+    }
+  ],
+  "agents": [
+    {
+      "agent_id": "69819b9412326156554941e1",
+      "name": "Customer Support Agent",
+      "type": "single",
+      "description": "Answers customer queries by searching website knowledge base, maintains conversation context, and provides accurate, helpful responses based on official company information",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1,
+      "has_knowledge_base": true,
+      "rag_id": "69819b84fd1daac38e53cb58",
+      "rag_name": "customersupportknowledgebaseru1x",
+      "response_schema_file": "response_schemas/customer_support_agent_response.json"
+    }
+  ],
+  "knowledge_bases": [
+    {
+      "rag_id": "69819b84fd1daac38e53cb58",
+      "rag_name": "customersupportknowledgebaseru1x",
+      "name": "Customer Support Knowledge Base",
+      "description": "Knowledge base containing website content and company information for customer support queries",
+      "used_by_agents": ["69819b9412326156554941e1"]
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-03T00:00:00Z",
+    "total_agents": 1,
+    "total_knowledge_bases": 1,
+    "workflow_pattern": "Input → Agent (KB) → Output"
+  }
+}
