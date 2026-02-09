@@ -16,6 +16,10 @@ export default defineConfig({
     headers: {
       'Content-Security-Policy': "frame-ancestors *",
     },
+    hmr: {
+      clientPort: 443,
+      protocol: 'wss',
+    },
   },
   build: {
     outDir: 'dist',
